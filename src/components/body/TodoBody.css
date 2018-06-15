@@ -1,0 +1,197 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.createTask {
+    position: relative;
+}
+
+.createTask .downArrow {
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    width: 64px;
+    top: 3px;
+    left: -9px;
+    text-align: center;
+    transform: rotate(90deg);
+    -webkit-appearance: none; /* 干掉默认的选项框 */
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+}
+
+.createTask .downArrow:checked::after {
+    color: #737373;
+}
+
+.createTask .downArrow::after {
+    color: #e6e6e6;
+    content: '\3009';
+    font-size: 20pt;
+    margin: 0 12px 3px 0;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bolder;
+}
+
+.createTask input:last-child {
+    position: relative;
+    font-size: 20pt;
+    border: 0;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    width: 100%;
+    padding: 16px 16px 16px 60px;
+}
+
+.createTask input::placeholder,
+.createTask input::-webkit-input-placeholder {
+    color: #dddddd;
+}
+
+.createTask input::-moz-placeholder {
+    color: #dddddd;
+}
+
+ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.item {
+    font-size: 24px;
+    border-top: 1px solid #dddddd;
+}
+
+li.item:last-child {
+    border-bottom: 1px solid #dddddd;
+}
+
+li.item div {
+    position: relative;
+}
+
+li.item div input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #dddddd;
+    width: 28px;
+    height: 28px;
+    top: 10px;
+    left: 5px;
+    border-radius: 50%;
+    outline: 0;
+    transform: rotate(15deg);
+}
+
+li.item div input:checked::before {
+    content: '√';
+    position: relative;
+    top: -2px;
+    color: green;
+    font-size: 25pt;
+}
+
+li.item div input:checked + div {
+    text-decoration: line-through;
+    color: #dddddd;
+}
+
+li.item div div {
+    padding: 15px 60px 15px 15px;
+    white-space: pre-line;
+    margin-left: 45px;
+    word-break: break-all;
+    line-height: 1.2;
+    transition: color 0.4s;
+}
+
+li.item:hover div button {
+    display: block;
+}
+
+li.item div button {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    color: #cc9a9a;
+    transition: color 0.2s ease-out;
+}
+
+li.item div button:hover {
+    color: #af5b5e;
+}
+
+li.item div button::before {
+    content: '×';
+    font-size: 20pt;
+}
+
+li.editing > input {
+    display: block;
+    padding: 10px 60px 10px 15px;
+    font-size: 24px;
+    outline: none;
+    margin: 4px 0 4px 60px;
+    width: 488px;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    color: #888888;
+}
+
+.footer button {
+    border: 0;
+}
+
+.footer a.selected {
+    border: 1px solid rgba(175, 47, 47, 0.2);
+}
+
+.footer button,
+.footer a {
+    background: transparent;
+    color: inherit;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.footer div {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid transparent;
+}
