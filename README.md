@@ -1,5 +1,5 @@
 # todomvc
-todomvc(http://todomvc.com)的react的小例子练习。
+todomvc (http://todomvc.com) 的react的小例子练习。
 
 
 1、clone项目
