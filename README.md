@@ -9,3 +9,5 @@ https://github.com/ld941082240/todomvc.git
 yarn install
 
 3、yarn start
+
+注：如有疏漏之处，恳请指出。
