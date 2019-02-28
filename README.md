@@ -7,5 +7,3 @@ todomvc (http://todomvc.com) 的react的小例子练习。
 2、yarn install
 
 3、yarn start
-
-注：如有疏漏之处，恳请指出。
